@@ -7,17 +7,38 @@
 //
 
 import UIKit
+import Foundation
+import SVProgressHUD
 
 class ViewController: UIViewController {
 
+    private var progress: SVProgressHUD?
+
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // TODO: - Setup
+        let position = view.center
+        let frame = CGRect(x: position.x, y: position.y, width: 100.0, height: 50.0)
+        progress = SVProgressHUD(frame: frame)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+
+
+    // MARK: - IBActions
+
+    @IBAction func willBeginSomething(_ sender: UIButton) {
+        // TODO: Event
+        SVProgressHUD.show()
+    }
+
+    @IBAction func willFinishSomething(_ sender: UIButton) {
+        // TODO: Event
     }
 
 
