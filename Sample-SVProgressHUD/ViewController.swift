@@ -12,17 +12,10 @@ import SVProgressHUD
 
 class ViewController: UIViewController {
 
-    private var progress: SVProgressHUD?
-
     // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // TODO: - Setup
-        let position = view.center
-        let frame = CGRect(x: position.x, y: position.y, width: 100.0, height: 50.0)
-        progress = SVProgressHUD(frame: frame)
     }
 
     override func didReceiveMemoryWarning() {
@@ -128,8 +121,6 @@ class ViewController: UIViewController {
             SVProgressHUD.dismiss(withDelay: d_one)
         }
     }
-
-
 
 
     ///
