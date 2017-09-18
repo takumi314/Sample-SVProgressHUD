@@ -35,6 +35,12 @@ class ViewController: UIViewController {
     @IBAction func willBeginSomething(_ sender: UIButton) {
         // TODO: Event
         SVProgressHUD.show()
+
+        // ３秒後に閉じる
+        let t = DispatchTime.now() + DispatchTimeInterval.seconds(3)
+        DispatchQueue.global(qos: .default).asyncAfter(deadline: t) {
+            SVProgressHUD.dismiss()
+        }
     }
 
     @IBAction func willFinishSomething(_ sender: UIButton) {
